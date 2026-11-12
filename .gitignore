@@ -1,0 +1,37 @@
+# Ambientes e Segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+secrets.*
+credentials.json
+token.json
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.bak
+*.swp
+notes/*pending*.json
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores e IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Dependências e caches comuns
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
