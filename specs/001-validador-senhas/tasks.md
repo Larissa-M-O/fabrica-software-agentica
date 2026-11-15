@@ -73,8 +73,8 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Objetivo:** Estabelecer a árvore física de diretórios do código-fonte e dos testes unitários, garantindo isolamento modular conforme o plano de arquitetura.
 - **Dependências:** Nenhuma.
 
-- [ ] T001 [P] Criar a estrutura do diretório do pacote de código-fonte em `src/password_validator/` e inicializar o arquivo vazio `src/password_validator/__init__.py`.
-- [ ] T002 [P] Criar a estrutura de diretórios para testes unitários em `tests/unit/` e inicializar o arquivo vazio `tests/__init__.py` e `tests/unit/__init__.py`.
+- [X] T001 [P] Criar a estrutura do diretório do pacote de código-fonte em `src/password_validator/` e inicializar o arquivo vazio `src/password_validator/__init__.py`.
+- [X] T002 [P] Criar a estrutura de diretórios para testes unitários em `tests/unit/` e inicializar o arquivo vazio `tests/__init__.py` e `tests/unit/__init__.py`.
 
 ---
 
