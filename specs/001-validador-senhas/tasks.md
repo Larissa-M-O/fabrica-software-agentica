@@ -103,10 +103,10 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Teste Independente:** Executar `python -m unittest tests/unit/test_rules.py` validando os casos de termos triviais, sequências e repetições (`FR-006` a `FR-008`).
 - **Dependências:** Fase 2 (Catálogo em memória) e Fase 3 (Módulo `rules.py` inicializado).
 
-- [ ] T008 [US2] Implementar a regra de detecção de senhas triviais e de dicionário `validar_senha_trivial` confrontando a senha contra o catálogo `trivial_passwords.py` de forma insensível a maiúsculas/minúsculas em `src/password_validator/rules.py`.
-- [ ] T009 [US2] Implementar a regra de detecção de sequências alfanuméricas simples diretas e reversas de 3 ou mais caracteres `validar_sequencia_simples` com algoritmo de janela deslizante em `src/password_validator/rules.py`.
-- [ ] T010 [US2] Implementar a regra de detecção de repetições de 3 ou mais caracteres idênticos consecutivos `validar_repeticao_caracteres` em `src/password_validator/rules.py`.
-- [ ] T011 [US2] Incrementar a suíte de testes unitários com os cenários da história US2 (cenários 2.1 a 2.4: detecção de dicionário, sequências diretas/reversas e repetições de caracteres) em `tests/unit/test_rules.py`.
+- [X] T008 [US2] Implementar a regra de detecção de senhas triviais e de dicionário `validar_senha_trivial` confrontando a senha contra o catálogo `trivial_passwords.py` de forma insensível a maiúsculas/minúsculas em `src/password_validator/rules.py`.
+- [X] T009 [US2] Implementar a regra de detecção de sequências alfanuméricas simples diretas e reversas de 3 ou mais caracteres `validar_sequencia_simples` com algoritmo de janela deslizante em `src/password_validator/rules.py`.
+- [X] T010 [US2] Implementar a regra de detecção de repetições de 3 ou mais caracteres idênticos consecutivos `validar_repeticao_caracteres` em `src/password_validator/rules.py`.
+- [X] T011 [US2] Incrementar a suíte de testes unitários com os cenários da história US2 (cenários 2.1 a 2.4: detecção de dicionário, sequências diretas/reversas e repetições de caracteres) em `tests/unit/test_rules.py`.
 
 ---
 
