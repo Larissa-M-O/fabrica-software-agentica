@@ -93,8 +93,8 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Teste Independente:** Executar `python -m unittest tests/unit/test_rules.py` confirmando a aprovação e reprovação precisa de cada regra estrutural isolada (`FR-001` a `FR-005`).
 - **Dependências:** Fase 2 (Models disponíveis).
 
-- [ ] T006 [US1] Implementar as funções avaliadoras de regras estruturais `validar_tamanho_minimo`, `validar_maiusculas`, `validar_minusculas`, `validar_numeros` e `validar_especiais` retornando objetos `ResultadoCriterio` em `src/password_validator/rules.py`.
-- [ ] T007 [US1] Implementar os testes unitários cobrindo todos os cenários da história US1 (cenários 1.1 a 1.6: comprimento mínimo, maiúsculas, minúsculas, números e especiais) para `rules.py` em `tests/unit/test_rules.py`.
+- [X] T006 [US1] Implementar as funções avaliadoras de regras estruturais `validar_tamanho_minimo`, `validar_maiusculas`, `validar_minusculas`, `validar_numeros` e `validar_especiais` retornando objetos `ResultadoCriterio` em `src/password_validator/rules.py`.
+- [X] T007 [US1] Implementar os testes unitários cobrindo todos os cenários da história US1 (cenários 1.1 a 1.6: comprimento mínimo, maiúsculas, minúsculas, números e especiais) para `rules.py` em `tests/unit/test_rules.py`.
 
 ---
 
