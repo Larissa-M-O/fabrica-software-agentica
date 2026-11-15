@@ -2,7 +2,7 @@
 
 - **Feature:** `001-validador-senhas`
 - **Artefato Avaliado:** `specs/001-validador-senhas/spec.md`
-- **Data de Verificação:** 2026-11-15
+- **Data de Verificação:** 2026-11-15 (Revisão Checkpoint 1)
 - **Avaliador:** Analista de Requisitos (`subagent-analista-requisitos`)
 
 ---
@@ -15,8 +15,8 @@
 - [x] **Caracteres Especiais:** Requisito explicitamente coberto em `FR-005` e testável em `US1` (Cenário 1.6).
 - [x] **Senhas Triviais e Termos Comuns:** Requisito explicitamente coberto em `FR-006` e testável em `US2` (Cenário 2.1).
 - [x] **Sequências Simples e Repetições:** Requisitos explicitamente cobertos em `FR-007` e `FR-008`, testáveis em `US2` (Cenários 2.2 e 2.3).
-- [x] **Feedback Estruturado e Compreensível:** Requisitos explicitamente cobertos em `FR-009` e `FR-010`, testáveis em `US3` (Cenários 3.1, 3.2 e 3.3).
-- [x] **Casos de Borda e Resiliência:** Requisitos explicitamente cobertos em `FR-011` e `FR-012`, testáveis em `US4` (Cenários 4.1 a 4.4).
+- [x] **Feedback Estruturado e Compreensível:** Requisitos explicitamente cobertos em `FR-009` e `FR-010`, testáveis em `US3` (Cenários 3.1, 3.2 e 3.3), com padronização estrita dos campos `forca` e `mensagens`.
+- [x] **Casos de Borda e Resiliência:** Requisitos explicitamente cobertos em `FR-011` e `FR-012`, testáveis em `US4` (Cenários 4.1 a 4.4), com tratamento unificado e sem exceção não tratada para `None` e tipos não string.
 
 ---
 
@@ -46,8 +46,8 @@
 
 ---
 
-## 5. Clareza e Ambiguidade
+## 5. Clareza e Registro de Esclarecimentos
 
-- [x] **Seção de Esclarecimentos Registrada:** Seção `## Clarifications` documenta as decisões tomadas sobre parâmetros padrão (tamanho 8, limites de repetição/sequência, passphrases).
+- [x] **Seções de Esclarecimentos Registradas:** Seção `## Clarifications` documenta a Sessão 1 (consolidação inicial) e a Sessão 2 (ajustes do Checkpoint 1 com padronização dos campos `forca` e `mensagens` e comportamento único para entradas inválidas).
 - [x] **Ausência de Marcadores Pendentes:** Não restam marcadores do tipo `[NEEDS CLARIFICATION]` pendentes de resposta.
-- [x] **Prontidão para Revisão Humana:** Especificação concisa, completa e pronta para submissão ao Checkpoint 1.
+- [x] **Prontidão para Nova Revisão Humana:** Especificação ajustada conforme feedback do Checkpoint 1, concisa e pronta para reapresentação ao humano.
