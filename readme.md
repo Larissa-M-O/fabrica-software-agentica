@@ -412,6 +412,14 @@ Cada spec percorre a zona autônoma (E2 a E7): Arquiteto, Criador de Tarefas, De
 5. **Controles de segurança.** Checkpoints, permissões, verificação no disco, limites de rodadas e um modelo diferente para cada papel. *(15 min)*
 6. **Prática.** Rodar a fábrica numa feature pequena e acompanhar o `state.json` mudando. *(30 min)*
 
+## Produtos de Software Desenvolvidos pela Fábrica
+
+A fábrica opera desacoplada dos softwares que produz, garantindo que o repositório de infraestrutura permaneça 100% puro. O produto gerado pelo ciclo de vida autônomo é entregue em seu próprio repositório independente:
+
+- **001-validador-senhas:** Motor determinístico, modular e resiliente de validação e classificação de força de senhas em Python Standard Library (sem dependências externas).
+  - **Repositório Independente:** [Larissa-M-O/validador-senhas](https://github.com/Larissa-M-O/validador-senhas)
+  - **Status:** Entregue (E8 Concluída) com 50 testes automatizados aprovados (código de saída 0).
+
 ## Perguntas para discussão
 
 - Por que o commit da spec não pode contar como aprovação do Checkpoint 1?

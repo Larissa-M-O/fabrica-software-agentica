@@ -122,6 +122,7 @@ Você **não implementa código-fonte nem escreve testes**: você delega as ativ
 - Ao retomar a sessão após o Checkpoint 2, consulta `gh pr view <pr> --json state,mergedAt`.
 - Se o status for `MERGED`, atualiza `human_checkpoints.merge_approval` como aprovado e registra `stage: "ENTREGUE"`.
 - Não declara a feature entregue sem a comprovação do merge no GitHub.
+- **Modelo de Entrega em Repositório Independente (Desacoplamento Arquitetural):** Quando o produto de software desenvolvido deve ser mantido em repositório dedicado para preservar o isolamento da fábrica como infraestrutura pura, a conclusão de E8 é comprovada pela criação e publicação íntegra do repositório independente de destino com histórico de commits preservado e suíte de testes 100% aprovada (código 0), acompanhada do encerramento formal sem merge do PR preparatório na fábrica (`state: CLOSED`), com registro público de auditoria.
 
 ---
 
