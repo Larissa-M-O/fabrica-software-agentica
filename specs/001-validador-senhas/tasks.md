@@ -115,9 +115,9 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Teste Independente:** Executar `python -m unittest tests/unit/test_validator.py` validando a classificação de força e o contrato de saída estruturado em conformidade com `contracts/validator_api.md` (`FR-009`, `FR-010`).
 - **Dependências:** Fase 3 e Fase 4 (Todas as regras de avaliação disponíveis).
 
-- [ ] T012 [US3] Implementar o algoritmo determinístico de pontuação e classificação de força `calcular_forca` retornando `NivelForca.FRACA`, `NivelForca.MEDIA` ou `NivelForca.FORTE` em `src/password_validator/validator.py`.
-- [ ] T013 [US3] Implementar as funções públicas `validar_senha` e `eh_senha_valida` orquestrando os critérios de `rules.py`, agregando as mensagens corretivas em linguagem natural (pt-BR) e construindo o objeto `ResultadoValidacao` em `src/password_validator/validator.py`.
-- [ ] T014 [US3] Implementar a suíte de testes unitários cobrindo todos os cenários da história US3 (cenários 3.1 a 3.3: classificação de força, lista consolidada de mensagens e função helper booleana) em `tests/unit/test_validator.py`.
+- [X] T012 [US3] Implementar o algoritmo determinístico de pontuação e classificação de força `calcular_forca` retornando `NivelForca.FRACA`, `NivelForca.MEDIA` ou `NivelForca.FORTE` em `src/password_validator/validator.py`.
+- [X] T013 [US3] Implementar as funções públicas `validar_senha` e `eh_senha_valida` orquestrando os critérios de `rules.py`, agregando as mensagens corretivas em linguagem natural (pt-BR) e construindo o objeto `ResultadoValidacao` em `src/password_validator/validator.py`.
+- [X] T014 [US3] Implementar a suíte de testes unitários cobrindo todos os cenários da história US3 (cenários 3.1 a 3.3: classificação de força, lista consolidada de mensagens e função helper booleana) em `tests/unit/test_validator.py`.
 
 ---
 
