@@ -82,9 +82,9 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Objetivo:** Implementar as estruturas de dados imutáveis, enumerações de domínio e catálogo em memória de termos triviais definidos em `data-model.md`.
 - **Dependências:** Fase 1 (Setup concluído).
 
-- [ ] T003 [P] Implementar as enumerações `NivelForca` (`FRACA`, `MEDIA`, `FORTE`), `CodigoCriterio` e as dataclasses imutáveis `ResultadoCriterio` e `ResultadoValidacao` com seus respectivos métodos `to_dict()` em `src/password_validator/models.py`.
-- [ ] T004 Implementar a suíte de testes unitários para validação de imutabilidade, conversão para dicionário e invariantes dos modelos em `tests/unit/test_models.py`.
-- [ ] T005 [P] Implementar o catálogo imutável em memória de senhas triviais e termos vulneráveis (`frozenset` insensível a maiúsculas/minúsculas) em `src/password_validator/trivial_passwords.py`.
+- [X] T003 [P] Implementar as enumerações `NivelForca` (`FRACA`, `MEDIA`, `FORTE`), `CodigoCriterio` e as dataclasses imutáveis `ResultadoCriterio` e `ResultadoValidacao` com seus respectivos métodos `to_dict()` em `src/password_validator/models.py`.
+- [X] T004 Implementar a suíte de testes unitários para validação de imutabilidade, conversão para dicionário e invariantes dos modelos em `tests/unit/test_models.py`.
+- [X] T005 [P] Implementar o catálogo imutável em memória de senhas triviais e termos vulneráveis (`frozenset` insensível a maiúsculas/minúsculas) em `src/password_validator/trivial_passwords.py`.
 
 ---
 

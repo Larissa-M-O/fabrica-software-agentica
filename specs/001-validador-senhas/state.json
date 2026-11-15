@@ -29,7 +29,10 @@
   },
   "tasks_done": [
     "T001",
-    "T002"
+    "T002",
+    "T003",
+    "T004",
+    "T005"
   ],
   "blockers": [],
   "human_checkpoints": {
@@ -42,5 +45,5 @@
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T16:43:35-03:00"
+  "updated_at": "2026-11-15T16:51:30-03:00"
 }
