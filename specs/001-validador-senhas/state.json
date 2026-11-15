@@ -1,0 +1,32 @@
+{
+  "feature": "001-validador-senhas",
+  "base_branch": "main",
+  "branch": "001-validador-senhas",
+  "gh_path": "& \"C:\\Program Files\\GitHub CLI\\gh.exe\"",
+  "pull_request": null,
+  "commands": {
+    "test": null,
+    "lint": null,
+    "build": null
+  },
+  "last_reviewed_commit": null,
+  "stage": "AGUARDANDO_REVISAO_HUMANA",
+  "artifacts": {
+    "spec": "specs/001-validador-senhas/spec.md",
+    "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md"
+  },
+  "gates": {
+    "e1_spec": "aprovado"
+  },
+  "tasks_done": [],
+  "blockers": [],
+  "human_checkpoints": {
+    "specification_review": {
+      "status": "pendente"
+    },
+    "merge_approval": {
+      "status": "pendente"
+    }
+  },
+  "updated_at": "2026-11-15T16:01:00-03:00"
+}
