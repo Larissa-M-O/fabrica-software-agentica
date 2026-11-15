@@ -9,8 +9,8 @@
     "lint": "python -m compileall -q src",
     "build": null
   },
-  "last_reviewed_commit": null,
-  "stage": "REVISANDO",
+  "last_reviewed_commit": "85ceda3a7787c1bf008abd152e522f3c7c6af6f0",
+  "stage": "TESTANDO",
   "artifacts": {
     "spec": "specs/001-validador-senhas/spec.md",
     "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md",
@@ -19,14 +19,16 @@
     "data_model": "specs/001-validador-senhas/data-model.md",
     "contracts": "specs/001-validador-senhas/contracts/validator_api.md",
     "quickstart": "specs/001-validador-senhas/quickstart.md",
-    "tasks": "specs/001-validador-senhas/tasks.md"
+    "tasks": "specs/001-validador-senhas/tasks.md",
+    "review_report": "specs/001-validador-senhas/review-report.md"
   },
   "gates": {
     "e1_spec": "aprovado",
     "e2_plan": "aprovado",
     "e3_tasks": "aprovado",
     "e3_5_analysis": "aprovado",
-    "e4_implementation": "aprovado"
+    "e4_implementation": "aprovado",
+    "e5_review": "aprovado com ressalvas"
   },
   "tasks_done": [
     "T001",
@@ -61,5 +63,5 @@
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T17:11:00-03:00"
+  "updated_at": "2026-11-15T17:17:00-03:00"
 }
