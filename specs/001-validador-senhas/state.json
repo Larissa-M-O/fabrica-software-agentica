@@ -6,7 +6,7 @@
   "pull_request": null,
   "commands": {
     "test": "python -m unittest discover -s tests -p \"test_*.py\"",
-    "lint": "python -m compileall -q src",
+    "lint": "python -m compileall -q src tests",
     "build": null
   },
   "last_reviewed_commit": "85ceda3a7787c1bf008abd152e522f3c7c6af6f0",
@@ -20,7 +20,8 @@
     "contracts": "specs/001-validador-senhas/contracts/validator_api.md",
     "quickstart": "specs/001-validador-senhas/quickstart.md",
     "tasks": "specs/001-validador-senhas/tasks.md",
-    "review_report": "specs/001-validador-senhas/review-report.md"
+    "review_report": "specs/001-validador-senhas/review-report.md",
+    "qa_report": "specs/001-validador-senhas/qa-report.md"
   },
   "gates": {
     "e1_spec": "aprovado",
@@ -28,7 +29,8 @@
     "e3_tasks": "aprovado",
     "e3_5_analysis": "aprovado",
     "e4_implementation": "aprovado",
-    "e5_review": "aprovado com ressalvas"
+    "e5_review": "aprovado com ressalvas",
+    "e6_qa": "aprovado"
   },
   "tasks_done": [
     "T001",
@@ -63,5 +65,5 @@
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T17:17:00-03:00"
+  "updated_at": "2026-11-15T17:26:00-03:00"
 }
