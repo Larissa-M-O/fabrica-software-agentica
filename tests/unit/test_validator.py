@@ -1,4 +1,4 @@
-"""Testes unitários do motor de validação e apresentação do resultado (US3, FR-009, FR-010)."""
+"""Testes unitários do motor de validação e apresentação do resultado (US3, US4, FR-009 a FR-012)."""
 import sys
 from pathlib import Path
 import unittest
@@ -17,7 +17,7 @@ from password_validator.validator import (
 
 
 class TestValidator(unittest.TestCase):
-    """Testes para o motor orquestrador de validação de senhas."""
+    """Testes para o motor orquestrador de validação de senhas (US3)."""
 
     def test_cenario_3_1_senha_aprovada_forte(self):
         """Cenário 3.1: Validação completa para senha válida e forte."""
@@ -112,6 +112,86 @@ class TestValidator(unittest.TestCase):
         self.assertFalse(eh_senha_valida("abc"))
         self.assertFalse(eh_senha_valida("SenhaForte123"))
         self.assertFalse(eh_senha_valida("Password123!"))
+
+
+class TestResilienciaECasosDeBorda(unittest.TestCase):
+    """Testes para resiliência de entradas e casos de borda (US4, FR-011, FR-012)."""
+
+    def test_cenario_4_1_entradas_nulas_e_tipos_invalidos(self):
+        """Cenário 4.1: Tratamento resiliente de None e tipos não-string (no-throw guarantee)."""
+        entradas_invalidas = [
+            None,
+            12345678,
+            True,
+            False,
+            3.1415,
+            ["Senha123!"],
+            {"senha": "Senha123!"},
+            (1, 2, 3),
+            object(),
+        ]
+        for entrada in entradas_invalidas:
+            with self.subTest(entrada=entrada, tipo=type(entrada)):
+                res = validar_senha(entrada)
+                self.assertFalse(res.is_valid)
+                self.assertEqual(res.forca, NivelForca.FRACA.value)
+                self.assertTrue(len(res.mensagens) > 0)
+                self.assertIn("cadeia de texto (string)", res.mensagens[0])
+                self.assertEqual(res.criterios[0].codigo, CodigoCriterio.TIPO_ENTRADA)
+                self.assertFalse(res.criterios[0].atendido)
+                # Verifica também o helper
+                self.assertFalse(eh_senha_valida(entrada))
+
+    def test_cenario_4_2_entradas_vazias_ou_somente_espacos(self):
+        """Cenário 4.2: Entrada vazia ou contendo apenas espaços em branco."""
+        entradas_vazias = ["", " ", "   ", "\t", "\n", " \t \n "]
+        for entrada in entradas_vazias:
+            with self.subTest(entrada=repr(entrada)):
+                res = validar_senha(entrada)
+                self.assertFalse(res.is_valid)
+                self.assertEqual(res.forca, NivelForca.FRACA.value)
+                self.assertTrue(len(res.mensagens) > 0)
+                self.assertIn("não pode ser vazia", res.mensagens[0])
+                self.assertEqual(res.criterios[0].codigo, CodigoCriterio.NAO_VAZIA)
+                self.assertFalse(res.criterios[0].atendido)
+                self.assertFalse(eh_senha_valida(entrada))
+
+    def test_cenario_4_3_passphrase_com_espacos_internos(self):
+        """Cenário 4.3: Suporte a passphrases longas com espaços intermediários preservados (FR-011)."""
+        passphrase = "Cavalo Azul Salta @981"
+        res = validar_senha(passphrase)
+
+        self.assertTrue(res.is_valid)
+        self.assertEqual(res.forca, NivelForca.FORTE.value)
+        self.assertEqual(res.mensagens, [])
+        self.assertTrue(eh_senha_valida(passphrase))
+
+        # Confirma que os espaços internos foram preservados na contagem
+        tamanho_criterio = next(
+            c for c in res.criterios if c.codigo == CodigoCriterio.TAMANHO_MINIMO
+        )
+        self.assertTrue(tamanho_criterio.atendido)
+        self.assertEqual(len(passphrase), 22)
+
+    def test_cenario_4_4_unicode_e_acentuacao(self):
+        """Cenário 4.4: Suporte a caracteres acentuados e símbolos Unicode."""
+        senha_unicode = "Coração!Seguro#2026"
+        res = validar_senha(senha_unicode)
+
+        self.assertTrue(res.is_valid)
+        self.assertEqual(res.forca, NivelForca.FORTE.value)
+        self.assertEqual(res.mensagens, [])
+        self.assertTrue(eh_senha_valida(senha_unicode))
+
+        # Confirma maiúsculas e minúsculas acentuadas
+        min_criterio = next(
+            c for c in res.criterios if c.codigo == CodigoCriterio.MINUSCULAS
+        )
+        mai_criterio = next(
+            c for c in res.criterios if c.codigo == CodigoCriterio.MAIUSCULAS
+        )
+        self.assertTrue(min_criterio.atendido)
+        self.assertTrue(mai_criterio.atendido)
 
 
 if __name__ == "__main__":

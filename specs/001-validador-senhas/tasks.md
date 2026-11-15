@@ -126,9 +126,9 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Teste Independente:** Executar `python -m unittest tests/unit/test_validator.py` cobrindo cenários com `None`, tipos não string, passphrases e Unicode (`FR-011`, `FR-012`).
 - **Dependências:** Fase 5 (Módulo `validator.py` orquestrador implementado).
 
-- [ ] T015 [US4] Implementar guard clauses para tratamento resiliente de entradas `None`, tipos não string (`isinstance(senha, str)` retornando `is_valid=False`, `forca="FRACA"` e mensagem orientativa) e entradas vazias ou contendo apenas espaços em `src/password_validator/validator.py`.
-- [ ] T016 [US4] Assegurar o suporte a passphrases (preservação de espaços internos para contagem de comprimento) e validação compatível com caracteres acentuados e símbolos Unicode em `src/password_validator/validator.py`.
-- [ ] T017 [US4] Implementar a suíte de testes unitários cobrindo todos os cenários da história US4 (cenários 4.1 a 4.4: None, tipos numéricos/booleanos, string vazia, apenas espaços, passphrases e Unicode) em `tests/unit/test_validator.py`.
+- [X] T015 [US4] Implementar guard clauses para tratamento resiliente de entradas `None`, tipos não string (`isinstance(senha, str)` retornando `is_valid=False`, `forca="FRACA"` e mensagem orientativa) e entradas vazias ou contendo apenas espaços em `src/password_validator/validator.py`.
+- [X] T016 [US4] Assegurar o suporte a passphrases (preservação de espaços internos para contagem de comprimento) e validação compatível com caracteres acentuados e símbolos Unicode em `src/password_validator/validator.py`.
+- [X] T017 [US4] Implementar a suíte de testes unitários cobrindo todos os cenários da história US4 (cenários 4.1 a 4.4: None, tipos numéricos/booleanos, string vazia, apenas espaços, passphrases e Unicode) em `tests/unit/test_validator.py`.
 
 ---
 
