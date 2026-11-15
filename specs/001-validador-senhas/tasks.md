@@ -136,9 +136,9 @@ A cada fase de implementação, o Desenvolvedor deve assegurar que todos os test
 - **Objetivo da Fase:** Expor a interface pública no pacote principal, documentar instruções de uso e certificar que todos os comandos de validação executam perfeitamente com código de saída 0.
 - **Dependências:** Fases 1 a 6 concluídas.
 
-- [ ] T018 [P] Configurar as exportações da API pública (`validar_senha`, `eh_senha_valida`, `ResultadoValidacao`, `ResultadoCriterio`, `NivelForca`, `CodigoCriterio`) com `__all__` em `src/password_validator/__init__.py`.
-- [ ] T019 [P] Documentar instruções de instalação, exemplos de importação e cenários práticos de uso no arquivo de documentação `README.md`.
-- [ ] T020 Executar a verificação integral da sintaxe do pacote via `python -m compileall -q src` e a suíte completa de testes unitários via `python -m unittest discover -s tests -p "test_*.py"`, garantindo código de saída 0.
+- [X] T018 [P] Configurar as exportações da API pública (`validar_senha`, `eh_senha_valida`, `ResultadoValidacao`, `ResultadoCriterio`, `NivelForca`, `CodigoCriterio`) com `__all__` em `src/password_validator/__init__.py`.
+- [X] T019 [P] Documentar instruções de instalação, exemplos de importação e cenários práticos de uso no arquivo de documentação `README.md`.
+- [X] T020 Executar a verificação integral da sintaxe do pacote via `python -m compileall -q src` e a suíte completa de testes unitários via `python -m unittest discover -s tests -p "test_*.py"`, garantindo código de saída 0.
 
 ---
 

@@ -10,7 +10,7 @@
     "build": null
   },
   "last_reviewed_commit": null,
-  "stage": "IMPLEMENTANDO",
+  "stage": "REVISANDO",
   "artifacts": {
     "spec": "specs/001-validador-senhas/spec.md",
     "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md",
@@ -25,7 +25,8 @@
     "e1_spec": "aprovado",
     "e2_plan": "aprovado",
     "e3_tasks": "aprovado",
-    "e3_5_analysis": "aprovado"
+    "e3_5_analysis": "aprovado",
+    "e4_implementation": "aprovado"
   },
   "tasks_done": [
     "T001",
@@ -44,7 +45,10 @@
     "T014",
     "T015",
     "T016",
-    "T017"
+    "T017",
+    "T018",
+    "T019",
+    "T020"
   ],
   "blockers": [],
   "human_checkpoints": {
@@ -57,5 +61,5 @@
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T17:07:20-03:00"
+  "updated_at": "2026-11-15T17:11:00-03:00"
 }
