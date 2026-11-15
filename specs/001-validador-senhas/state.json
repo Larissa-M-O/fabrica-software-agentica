@@ -3,14 +3,14 @@
   "base_branch": "main",
   "branch": "001-validador-senhas",
   "gh_path": "& \"C:\\Program Files\\GitHub CLI\\gh.exe\"",
-  "pull_request": null,
+  "pull_request": "https://github.com/Larissa-M-O/fabrica-software-agentica/pull/1",
   "commands": {
     "test": "python -m unittest discover -s tests -p \"test_*.py\"",
     "lint": "python -m compileall -q src tests",
     "build": null
   },
   "last_reviewed_commit": "5ad67724a737f52077e6c4669818819207e7e6ba",
-  "stage": "PUBLICANDO_PR",
+  "stage": "AGUARDANDO_MERGE",
   "artifacts": {
     "spec": "specs/001-validador-senhas/spec.md",
     "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md",
@@ -31,7 +31,8 @@
     "e4_implementation": "aprovado",
     "e5_review": "aprovado com ressalvas",
     "e6_qa": "aprovado",
-    "e6_qa_review": "aprovado com ressalvas"
+    "e6_qa_review": "aprovado com ressalvas",
+    "e7_pr": "aprovado"
   },
   "tasks_done": [
     "T001",
@@ -66,5 +67,5 @@
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T17:28:00-03:00"
+  "updated_at": "2026-11-15T17:34:00-03:00"
 }
