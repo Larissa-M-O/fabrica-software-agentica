@@ -9,8 +9,8 @@
     "lint": "python -m compileall -q src tests",
     "build": null
   },
-  "last_reviewed_commit": "85ceda3a7787c1bf008abd152e522f3c7c6af6f0",
-  "stage": "TESTANDO",
+  "last_reviewed_commit": "5ad67724a737f52077e6c4669818819207e7e6ba",
+  "stage": "PUBLICANDO_PR",
   "artifacts": {
     "spec": "specs/001-validador-senhas/spec.md",
     "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md",
@@ -30,7 +30,8 @@
     "e3_5_analysis": "aprovado",
     "e4_implementation": "aprovado",
     "e5_review": "aprovado com ressalvas",
-    "e6_qa": "aprovado"
+    "e6_qa": "aprovado",
+    "e6_qa_review": "aprovado com ressalvas"
   },
   "tasks_done": [
     "T001",
@@ -65,5 +66,5 @@
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T17:26:00-03:00"
+  "updated_at": "2026-11-15T17:28:00-03:00"
 }
