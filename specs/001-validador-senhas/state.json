@@ -5,28 +5,39 @@
   "gh_path": "& \"C:\\Program Files\\GitHub CLI\\gh.exe\"",
   "pull_request": null,
   "commands": {
-    "test": null,
-    "lint": null,
+    "test": "python -m unittest discover -s tests -p \"test_*.py\"",
+    "lint": "python -m compileall -q src",
     "build": null
   },
   "last_reviewed_commit": null,
-  "stage": "AGUARDANDO_REVISAO_HUMANA",
+  "stage": "IMPLEMENTANDO",
   "artifacts": {
     "spec": "specs/001-validador-senhas/spec.md",
-    "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md"
+    "requirements_checklist": "specs/001-validador-senhas/checklists/requirements.md",
+    "plan": "specs/001-validador-senhas/plan.md",
+    "research": "specs/001-validador-senhas/research.md",
+    "data_model": "specs/001-validador-senhas/data-model.md",
+    "contracts": "specs/001-validador-senhas/contracts/validator_api.md",
+    "quickstart": "specs/001-validador-senhas/quickstart.md",
+    "tasks": "specs/001-validador-senhas/tasks.md"
   },
   "gates": {
-    "e1_spec": "aprovado"
+    "e1_spec": "aprovado",
+    "e2_plan": "aprovado",
+    "e3_tasks": "aprovado",
+    "e3_5_analysis": "aprovado"
   },
   "tasks_done": [],
   "blockers": [],
   "human_checkpoints": {
     "specification_review": {
-      "status": "pendente"
+      "status": "aprovado",
+      "aprovado_em": "2026-11-15T16:31:02-03:00",
+      "mensagem": "Aprovado"
     },
     "merge_approval": {
       "status": "pendente"
     }
   },
-  "updated_at": "2026-11-15T16:27:00-03:00"
+  "updated_at": "2026-11-15T16:41:00-03:00"
 }
